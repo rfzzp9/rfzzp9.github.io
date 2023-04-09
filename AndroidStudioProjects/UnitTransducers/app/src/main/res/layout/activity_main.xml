@@ -8,12 +8,12 @@
 
     <EditText
         android:id="@+id/inputEditText"
-        android:layout_width="250dp"
+        android:layout_width="225dp"
         android:layout_height="wrap_content"
         android:hint="자연수를 입력해주세요."
-        android:maxLength="8"
+        android:maxLength="7"
         android:textColorHint="#896FB8"
-        android:textSize="25sp"
+        android:textSize="22.5sp"
         android:textColor="#6F2BE8"
         android:textStyle="italic"
         android:gravity="end"
