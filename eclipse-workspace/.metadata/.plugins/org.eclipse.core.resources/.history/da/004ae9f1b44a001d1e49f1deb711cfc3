@@ -1,0 +1,17 @@
+package Practice;
+
+public class IncOperator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		final double PI = 3.141592;
+		double a = (10*10*PI)*2;
+		double b = 15*15*PI;
+		
+		System.out.println("20cm 피자 2개의 면적="+a);
+		System.out.println("30cm 피자 면적="+b);
+		String answer = (a>b)?"20cm 피자 2개를 주문하세요.":"30cm 피자 한 개를 주문하세요.";
+		System.out.println(answer);
+	}
+}

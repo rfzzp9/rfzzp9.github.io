@@ -1,0 +1,28 @@
+package exam2;
+
+class Circle
+{
+	int radius;
+	public Circle(int radius)
+	{
+		this.radius = radius;
+	}
+	public boolean equals(Circle c1)
+	{
+		if(radius==c1.radius)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}
+public class CircleTest {
+	public static void main(String[] args) {
+		Integer obj = new Integer(100);
+		int value = obj.intValue();
+		System.out.println(value);
+	}
+}

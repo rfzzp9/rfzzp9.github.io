@@ -1,0 +1,17 @@
+package Practice;
+public class Add2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int z;
+		
+		z = addition(100, 200);
+		System.out.println(z);
+	}
+	
+	public static int addition(int a, int b)
+	{
+		int sum = a+b;
+		return sum;
+	}
+}

@@ -1,0 +1,10 @@
+
+import javax.swing.JFrame;
+
+public class Timer extends JFrame {
+	public Timer()
+	{
+		Countdown m = new Countdown();
+		
+	}
+}

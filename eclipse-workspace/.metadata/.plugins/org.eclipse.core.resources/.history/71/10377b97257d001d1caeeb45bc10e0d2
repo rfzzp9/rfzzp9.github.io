@@ -1,0 +1,37 @@
+package exam2;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class TempConverter extends JFrame {
+	JLabel label1, label2;
+	JTextField textfield1, textfield2;
+	JButton button;
+	JPanel panel;
+	public TempConverter()
+	{
+		setSize(300,150);
+		setTitle("온도변환기");
+		panel = new JPanel();
+		
+		label1 = new JLabel("화씨온도");
+		textfield1 = new JTextField(20);
+		label2 = new JLabel("섭씨온도");
+		textfield2 = new JTextField(20);
+		button = new JButton("변환");
+		panel.add(label1);
+		panel.add(textfield1);
+		panel.add(label2);
+		panel.add(textfield2);
+		panel.add(button);
+		add(panel);
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+	public static void main(String[] args) {
+		TempConverter t = new TempConverter();
+	}
+}

@@ -1,0 +1,28 @@
+package exam2;
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class MyFrame extends JFrame
+{
+	MyFrame()
+	{
+		setSize(300,150);
+		setTitle("MyFrame");
+		setLocation(300,200);
+		setLayout(new FlowLayout());
+		getContentPane().setBackground(Color.yellow);
+		JButton b1 = new JButton("확인");
+		JButton b2 = new JButton("취소");
+		this.add(b1);
+		this.add(b2);
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+	public static void main(String[] args) {
+		MyFrame f = new MyFrame();
+	}
+}

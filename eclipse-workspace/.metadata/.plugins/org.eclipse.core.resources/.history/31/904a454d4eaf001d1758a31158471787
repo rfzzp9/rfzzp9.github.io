@@ -1,0 +1,9 @@
+import javax.swing.JFrame;
+
+public class NewFrame extends JFrame {
+	public NewFrame()
+	{
+		setTitle("난수 3번 결과");
+		
+	}
+}

@@ -1,0 +1,72 @@
+import java.io.UnsupportedEncodingException;
+import java.net.ConnectException;
+import java.util.Properties;
+
+import javax.mail.AuthenticationFailedException;
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
+public class SendMail {
+	public SendMail(String email) throws Exception
+	{
+		// 메일 관련 정보
+        String host = "smtp.naver.com"; //gmail smtp셋팅 (smtp.gmail.com)
+        String username = "rfzzp9@naver.com"; //보내는사람 ID
+        String password = "atqcoz99uh7162"; //보내는사람 PW
+         
+        // 메일 내용
+        final String BODY = String.join(
+		        System.getProperty("line.separator"),
+		        "<h1>이메일 인증번호 안내</h1>",
+		        "<p>안녕하세요. 멋쟁이 사자처럼입니다."
+		        + "인증 번호를 확인하시고, 회원 가입창에서 이메일 인증을 완료해주십시오."
+		        + "getRandomNum()</p>."
+		        );
+         
+        //properties 설정
+        Properties props = new Properties();
+        props.put("mail.transport.protocol", "smtp");
+        props.put("mail.smtp.host", "smtp.naver.com");
+        props.put("mail.smtp.port", "465");
+        props.put("mail.smtp.ssl.enable", "true");
+        props.put("mail.smtp.auth", "true");
+        
+        
+        //Authenticator auth  = new SMTPAuthenticator(username, password);
+        //Session ms = Session.getInstance(props,auth);
+        
+        // 메일 세션
+        Session session = Session.getDefaultInstance(props);
+        MimeMessage msg = new MimeMessage(session);
+ 
+        // 메일 관련
+        msg.setSubject("이메일 인증 안내");
+        msg.setContent(BODY, "text/html; charset=utf-8");
+        msg.setFrom(new InternetAddress(username));
+        msg.addRecipient(Message.RecipientType.TO, new InternetAddress("rfzzp9@naver.com"));
+ 
+        // 발송 처리
+        Transport transport = session.getTransport("smtps");
+        transport.connect(host, username, password);
+        //transport.connect(host, "", "");
+        transport.sendMessage(msg, msg.getAllRecipients());
+        transport.close();     
+    }
+	
+	public String getRandomNum()
+	{
+		StringBuffer sb = new StringBuffer();
+		
+		for(int i=0; i<6; ++i)
+		{
+			int n = (int)(Math.random()*10);
+			sb.append(n);
+		}
+		return sb.toString();
+	}
+}

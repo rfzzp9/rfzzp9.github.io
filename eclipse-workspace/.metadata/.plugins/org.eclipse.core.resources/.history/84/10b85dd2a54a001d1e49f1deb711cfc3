@@ -1,0 +1,16 @@
+package Practice;
+public class Add2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String s1 = "Hello";
+		String s2 = "World!";
+		
+		System.out.println(s1+s2);
+		int age=20;
+		
+		System.out.println("내년이면 "+age+"살!");
+	}
+
+}

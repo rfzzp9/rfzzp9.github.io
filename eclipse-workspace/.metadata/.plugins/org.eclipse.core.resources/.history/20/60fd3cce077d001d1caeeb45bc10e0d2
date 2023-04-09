@@ -1,0 +1,27 @@
+package exam2;
+
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class MyFrame extends JFrame
+{
+	public MyFrame()
+	{
+		setTitle("GridLayoutTest");
+		setSize(300,150);
+		setLayout(new GridLayout(2,3));
+		add(new JButton("button1"));
+		add(new JButton("button2"));
+		add(new JButton("button3"));
+		add(new JButton("button4"));
+		add(new JButton("button5"));
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+	}
+	public static void main(String[] args) {
+		MyFrame f = new MyFrame();
+	}
+}

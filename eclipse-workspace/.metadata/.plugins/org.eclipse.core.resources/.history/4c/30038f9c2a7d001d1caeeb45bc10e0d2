@@ -1,0 +1,16 @@
+package exam2;
+
+import javax.swing.JFrame;
+
+public class MyFrame extends JFrame
+{
+	public MyFrame()
+	{
+		setSize(600,150);
+		setLocation(500,500);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		MyFrame f = new MyFrame();
+	}
+}

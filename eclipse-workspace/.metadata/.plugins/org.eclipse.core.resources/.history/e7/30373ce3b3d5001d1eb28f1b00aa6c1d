@@ -1,0 +1,72 @@
+import java.io.UnsupportedEncodingException;
+import java.net.ConnectException;
+import java.util.Properties;
+
+import javax.mail.AuthenticationFailedException;
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+
+public class SendMail {
+	public SendMail(String id, String pwd) throws Exception
+	{
+		Properties props = System.getProperties();
+        props.put("mail.transport.protocol", "smtp");
+        props.put("mail.smtp.port", 25); 
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.auth", "true");
+
+		
+		final String BODY = String.join(
+		        System.getProperty("line.separator"),
+		        "<h1>이메일 인증번호 안내</h1>",
+		        "<p>안녕하세요. 멋쟁이 사자처럼입니다."
+		        + "인증 번호를 확인하시고, 회원 가입창에서 이메일 인증을 완료해주십시오."
+		        + "getRandomNum()</p>."
+		        );
+        
+		
+		
+		//TODO 새 코드 찾아야 함
+		
+        Session session = Session.getInstance(props);
+        MimeMessage msg = new MimeMessage(session);
+        msg.setFrom(new InternetAddress("rfzzp9@naver.com", "곽채원"));
+        msg.addRecipient(Message.RecipientType.TO, new InternetAddress("rfzzp9@naver.com", "곽채원"));
+        msg.setSubject("[멋쟁이 사자처럼] 이메일 인증번호 안내");
+        msg.setContent(BODY, "text/html;charset=euc-kr");
+        
+        Transport transport = session.getTransport();
+        
+        try
+        {
+        	System.out.println("Sending...");	
+            
+        	transport.connect("smtp.live.com", "rfzzp9@naver.com", "atqcoz99uh7162");
+            transport.sendMessage(msg, msg.getAllRecipients());
+        	
+            
+
+            System.out.println("Success Message Send");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
+    }
+	
+	public String getRandomNum()
+	{
+		StringBuffer sb = new StringBuffer();
+		
+		for(int i=0; i<6; ++i)
+		{
+			int n = (int)(Math.random()*10);
+			sb.append(n);
+		}
+		return sb.toString();
+	}
+}

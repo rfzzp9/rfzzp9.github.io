@@ -1,0 +1,13 @@
+package exam2;
+
+class Circle
+{
+	
+}
+public class CircleTest {
+	public static void main(String[] args) {
+		Circle obj = new Circle();
+		System.out.println("obj is of type "+obj.getClass().getName());
+		System.out.println("obj 해쉬코드 : "+obj.hashCode());
+	}
+}

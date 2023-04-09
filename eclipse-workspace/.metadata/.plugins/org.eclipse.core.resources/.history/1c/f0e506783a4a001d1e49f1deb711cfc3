@@ -1,0 +1,12 @@
+package Practice;
+public class Add2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		boolean flag = true;
+		boolean y = 1<2;
+		System.out.println(y);
+	}
+
+}

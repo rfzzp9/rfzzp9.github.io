@@ -1,0 +1,26 @@
+import java.awt.BorderLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public MyListener implements ActionListener
+{
+	JButton button = (JButton) e.getSource();
+	counter++;
+}
+
+public class EventTest2 extends JFrame {
+	private JButton button;
+	private JLabel label;
+	int counter=0;
+	public EventTest2()
+	{
+		setSize(400,150);
+		setTitle("이벤트 예제");
+		setLayout(new BorderLayout());
+		button = new JButton("증가");
+		label = new JLabel("현재의 카운터값: "+counter);
+		button.addActionListener(new MyListener());
+	}
+}

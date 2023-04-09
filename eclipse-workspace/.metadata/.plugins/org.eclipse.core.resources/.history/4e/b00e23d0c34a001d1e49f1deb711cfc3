@@ -1,0 +1,15 @@
+package Practice;
+import java.util.*;
+
+public class IncOperator {
+	
+	public static void main(String[] args) {
+		
+		String[] menu= {"pepperoni", "Mushrooms", "Onions Sausage Bacom"};
+		
+		for(String i: menu)
+		{
+			System.out.println(i);
+		}
+	}
+}

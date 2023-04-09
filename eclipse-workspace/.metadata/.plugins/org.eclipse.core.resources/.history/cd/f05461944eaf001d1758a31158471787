@@ -1,0 +1,28 @@
+import java.awt.Container;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class NewFrame extends JFrame {
+	public NewFrame()
+	{
+		setTitle("난수 3번 결과");
+		setLayout(null);
+		
+		Container c = getContentPane();
+		JLabel result = new JLabel("결과 : ");
+		JLabel answer = new JLabel();
+		JButton btn = new JButton("확인");
+		
+		result.setBounds(15, 30,100,100);
+		answer.setBounds(50, 30,100,100);
+		btn.setBounds(320, 100, 80, 40);
+		c.add(result);
+		c.add(answer);
+		c.add(btn);
+		
+		
+		setVisible(true);
+	}
+}

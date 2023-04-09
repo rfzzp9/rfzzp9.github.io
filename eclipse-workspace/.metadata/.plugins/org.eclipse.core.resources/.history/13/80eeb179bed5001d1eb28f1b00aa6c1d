@@ -1,0 +1,24 @@
+import java.awt.Container;
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class ZipCode extends JFrame {
+	public ZipCode()
+	{
+		Container c = getContentPane();
+		setSize(500, 600);
+		setLayout(null);
+		
+		JLabel zipCodeLa = new JLabel("도로명 주소[도로명/건물명] 또는 지번주소[동/읍/면/리] 입력");
+		
+		zipCodeLa.setFont(new Font("Arial", Font.BOLD, 20));
+		
+		zipCodeLa.setBounds(20, 10, 400, 100);
+		
+		c.add(zipCodeLa);
+		
+		setVisible(true);
+	}
+}

@@ -1,0 +1,34 @@
+package exam2;
+
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class MyFrame extends JFrame
+{
+	private JPanel panel;
+	private JLabel label1, label2;
+	public MyFrame()
+	{
+		setTitle("레이블 테스트");
+		setSize(400,150);
+		
+		panel = new JPanel();
+		label1 = new JLabel("Color Label");
+		label1.setForeground(Color.blue);
+		
+		label2 = new JLabel("Font Label");
+		label2.setForeground(Color.orange);
+		label2.setFont(new Font("Arial",Font.ITALIC, 30));
+		panel.add(label1);
+		panel.add(label2);
+		
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		MyFrame f = new MyFrame();
+	}
+}

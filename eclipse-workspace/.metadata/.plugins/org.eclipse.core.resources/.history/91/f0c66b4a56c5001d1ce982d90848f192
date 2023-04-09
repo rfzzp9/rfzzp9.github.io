@@ -1,0 +1,117 @@
+import java.awt.Container;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+public class JoinPage extends JFrame {
+	public JoinPage()
+	{
+		Container c = getContentPane();
+		setSize(400, 650);
+		setLayout(null);
+		
+		JLabel joinLa = new JLabel("Login Merbership Page");
+		
+		joinLa.setFont(new Font("Arial", Font.BOLD, 20));
+		
+		JLabel idLa = new JLabel("아이디");
+		JTextField idTf = new JTextField();
+		JButton idCheckLa = new JButton("중복 확인");
+		
+		JLabel pwLa = new JLabel("비밀번호");
+		JPasswordField pwTf = new JPasswordField();
+		JLabel rePwLa = new JLabel("비밀번호 확인");
+		JPasswordField rePwTf = new JPasswordField();
+		
+		JLabel nameLa = new JLabel("이름");
+		JTextField nameTf = new JTextField();
+		JLabel genderLa = new JLabel("성별");
+		JTextField genderTf = new JTextField();
+		JLabel birthLa = new JLabel("주민등록번호"); //앞뒤 자릿수 맞춰야함
+		JTextField birthTf = new JTextField("");
+		JLabel phoneNumLa = new JLabel("전화번호");
+		JTextField phoneNumTf = new JTextField();
+		JLabel emailLa = new JLabel("이메일");
+		JButton emailTestBt = new JButton("인증번호 받기");
+		JTextField CertifiNumTf = new JTextField(); //인증번호 받는 textfield
+		JButton confirmBt = new JButton("확인"); //인증번호 확인
+		JTextField emailTf = new JTextField();
+		JLabel addressLa = new JLabel("자택주소");
+		JTextField addressTf1 = new JTextField(); //우편번호
+		JTextField addressTf2 = new JTextField(); //나머지 주소라고 text 남겨야 함
+		JButton searchAddressBt = new JButton("우편번호 찾기");
+		
+		JButton joinBt = new JButton("회원가입");
+		JButton exitBt = new JButton("취소");
+
+		joinLa.setBounds(75, 1, 250, 100);
+		idLa.setBounds(15, 100, 100, 50);
+		idTf.setBounds(120, 116, 140, 20);
+		idCheckLa.setBounds(270, 116, 88, 20);
+		pwLa.setBounds(15, 135, 100, 50);
+		pwTf.setBounds(120, 152, 140, 20);
+		rePwLa.setBounds(15, 170, 100, 50);  //label 세로 항목 줄간격 35 단위
+		rePwTf.setBounds(120, 186, 140, 20); //textfield 줄간격 34 단위
+		nameLa.setBounds(15, 205, 100, 50);
+		nameTf.setBounds(120, 222, 140, 20);
+		genderLa.setBounds(15, 240, 100, 50);
+		genderTf.setBounds(120, 254, 140, 20);
+		birthLa.setBounds(15, 275, 100, 50);
+		birthTf.setBounds(120, 291, 140, 20);
+		phoneNumLa.setBounds(15, 310, 100, 50);
+		phoneNumTf.setBounds(120, 325, 140, 20);
+		emailLa.setBounds(15, 345, 100, 50);
+		emailTf.setBounds(120, 361, 140, 20);
+		emailTestBt.setBounds(120, 396, 115, 20);
+		CertifiNumTf.setBounds(120, 430, 115, 20);
+		confirmBt.setBounds(240, 430, 60, 20);
+		addressLa.setBounds(15, 448, 100, 50);
+		//searchAddressBt.setBounds(120, 396, 130, 20);
+		
+		addressTf2.setBounds(120, 465, 200, 20);
+		joinBt.setBounds(80, 510, 100, 20);
+		exitBt.setBounds(200, 510, 70, 20);
+		
+		pwTf.setEchoChar('*');
+		rePwTf.setEchoChar('*');
+		
+		
+		c.add(joinLa);
+		c.add(idLa);
+		c.add(idTf);
+		c.add(idCheckLa);
+		c.add(pwLa);
+		c.add(pwTf);
+		c.add(rePwLa);
+		c.add(rePwTf);
+		c.add(nameLa);
+		c.add(nameTf);
+		c.add(genderLa);
+		c.add(genderTf);
+		c.add(birthLa);
+		c.add(birthTf);
+		c.add(phoneNumLa);
+		c.add(phoneNumTf);
+		c.add(emailLa);
+		c.add(emailTestBt);
+		c.add(emailTf);
+		c.add(CertifiNumTf);
+		c.add(confirmBt);
+		c.add(addressLa);
+		c.add(addressTf1);
+		c.add(addressTf2);
+		c.add(searchAddressBt);
+		c.add(joinBt);
+		c.add(exitBt);
+		
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new JoinPage();
+	}
+}

@@ -1,0 +1,30 @@
+import java.util.Timer;
+import java.util.TimerTask;
+
+import javax.swing.JFrame;
+
+public class Countdown{
+	
+	static int i = 180;
+	static int minute = i/60;
+	static int second = i%60;
+	public static void main(String[] args) {
+		Timer m = new Timer();
+		
+		m.scheduleAtFixedRate(new TimerTask()
+		{
+            public void run() {
+            	
+                --i;
+                
+                JoinPage.count.setText(Integer.toString(minute)+":"+Integer.toString(second));
+                System.out.println(Integer.toString(minute)+":"+Integer.toString(second));
+                System.out.println(i);
+                if (i == 0) {
+                    m.cancel();
+                    //System.out.println("timer out");
+                }
+            }
+		},0,1000);
+	}
+}

@@ -1,0 +1,15 @@
+package Practice;
+import java.util.*;
+
+public class IncOperator {
+	
+	public static void main(String[] args) {
+		
+		int[] list= {1,2,3,4,5};
+		
+		for(int e: list)
+		{
+			System.out.println(e);
+		}
+	}
+}

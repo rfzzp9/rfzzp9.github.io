@@ -1,0 +1,10 @@
+package eexxaamm;
+
+public class URLConnectionReader {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

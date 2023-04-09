@@ -1,0 +1,75 @@
+import java.awt.Container;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class JoinPage extends JFrame {
+	public JoinPage()
+	{
+		Container c = getContentPane();
+		setSize(400, 600);
+		setLayout(null);
+		
+		JLabel joinLa = new JLabel("Login Merbership Page");
+		
+		joinLa.setFont(new Font("Arial", Font.BOLD, 20));
+		
+		JLabel idLa = new JLabel("아이디");
+		JTextField idTf = new JTextField();
+		JButton idCheckLa = new JButton("아이디 중복검사");
+		
+		JLabel pwLa = new JLabel("비밀번호");
+		JTextField pwTf = new JTextField();
+		JLabel rePwLa = new JLabel("비밀번호 확인");
+		
+		JLabel nameLa = new JLabel("이름");
+		JTextField nameTf = new JTextField();
+		JLabel genderLa = new JLabel("성별");
+		JTextField genderTf = new JTextField();
+		JLabel phoneNumLa = new JLabel("전화번호");
+		JTextField phoneNumTf = new JTextField();
+		JLabel emailLa = new JLabel("이메일");
+		JTextField emailTf = new JTextField();
+		JLabel addressLa = new JLabel("자택주소");
+		JTextField addressTf = new JTextField();
+		JButton searchAddressLa = new JButton("우편번호 찾기");
+		
+		JButton joinBt = new JButton("회원가입");
+		JButton exitBt = new JButton("취소");
+
+		joinLa.setBounds(20, 1, 250, 100);
+		idLa.setBounds(15, 100, 100, 50);
+		idTf.setBounds(65, 116, 100, 20);
+		idCheckLa.setBounds(180, 116, 130, 20);
+		
+		c.add(joinLa);
+		c.add(idLa);
+		c.add(idTf);
+		c.add(idCheckLa);
+		c.add(pwLa);
+		c.add(pwTf);
+		c.add(rePwLa);
+		c.add(nameLa);
+		c.add(nameTf);
+		c.add(genderLa);
+		c.add(genderTf);
+		c.add(phoneNumLa);
+		c.add(phoneNumTf);
+		c.add(emailLa);
+		c.add(emailTf);
+		c.add(addressLa);
+		c.add(addressTf);
+		c.add(searchAddressLa);
+		c.add(joinBt);
+		c.add(exitBt);
+		
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new JoinPage();
+	}
+}

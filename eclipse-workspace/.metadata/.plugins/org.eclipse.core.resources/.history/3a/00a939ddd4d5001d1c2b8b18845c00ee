@@ -1,0 +1,26 @@
+import java.util.Timer;
+import java.util.TimerTask;
+
+import javax.swing.JFrame;
+
+public class Countdown{
+	
+	static int i = 5;
+
+	public static void main(String[] args) {
+		Timer m = new Timer();
+		
+		m.scheduleAtFixedRate(new TimerTask()
+		{
+            public void run() {
+            	
+                --i;
+                
+                if (i == 0) {
+                    m.cancel();
+                    //System.out.println("timer out");
+                }
+            }
+		},0,1000);
+	}
+}
